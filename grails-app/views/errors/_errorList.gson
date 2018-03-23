@@ -1,0 +1,9 @@
+import utils.messages.validation.ValidationError
+
+model {
+    ValidationError validationError
+}
+
+json g.render(validationError, [excludes: ['rejectedValue']]) {
+    rejectedValue validationError.rejectedValue != null ? validationError.rejectedValue : 'null'
+}

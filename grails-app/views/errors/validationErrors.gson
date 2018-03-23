@@ -1,0 +1,10 @@
+import utils.messages.validation.ValidationErrorMessage
+
+model {
+    ValidationErrorMessage responseObject
+}
+
+json {
+    message responseObject.message
+    errorList tmpl.errorList('validationError', responseObject.errorList)
+}

@@ -1,0 +1,7 @@
+import utils.messages.NotFound
+
+model {
+	NotFound responseObject
+}
+
+json g.render(responseObject)
